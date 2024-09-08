@@ -2,11 +2,14 @@
 Creates shot list and folder structure. launches nuke houdini etc applications.
 
 ## What is a show manager
-- **add image**
+Show manager is to create and manage shows and shots under that show. We can simply import Excel data to create show and shot list. We can set shot resolution, frame range and comments like what is the task in that shot etc. We can also create folder structure for each shot automatically. All this data we can later use when we work on shots.
+- **UI of show manager**
+![Excel sheet Example](./resources/Show_manager_SS.jpg)
 
 ## What is a project launcher
-Description goes here
-- **add image**
+Project launcher is to use the data we added in show manager. we can launch softwares like nuke, houdini, substance with the feeded settings automatically. For eg. it will launch nuke with pre defined settings like resolution frame range and nuke templete to work.
+- **UI of project launcher**
+![Excel sheet Example](./resources/Project_launcher_SS.jpg)
 
 ## How to Use?
 
