@@ -244,9 +244,14 @@ class ShowShotManager(QMainWindow):
 
             self.update_table()
 
-    def update_table(self):
-        self.table.setRowCount(0)
+    def update_table(self, selected_show=None):
+        """Update the table with shots, optionally filtered by the selected show."""
+        self.table.setRowCount(0)  # Clear the table
+
         for show_name, shots in self.shows.items():
+            if selected_show and show_name != selected_show:
+                continue  # Skip shots not belonging to the selected show
+
             for shot in shots:
                 row_position = self.table.rowCount()
                 self.table.insertRow(row_position)
@@ -260,6 +265,9 @@ class ShowShotManager(QMainWindow):
                 remove_button = QPushButton('Remove')
                 remove_button.clicked.connect(lambda ch, row=row_position: self.remove_shot(row))
                 self.table.setCellWidget(row_position, 5, remove_button)
+
+        
+
 
     def remove_shot(self, row):
         show_name = self.table.item(row, 0).text()
@@ -372,9 +380,9 @@ class ShowShotManager(QMainWindow):
             self.show_dropdown.setCurrentText(current_show)
 
     def show_dropdown_changed(self, index):
-        show_name = self.show_dropdown.currentText()
-        if show_name in self.shows:
-            self.show_input.setText(show_name)
+        """Filter the shots based on the selected show in the dropdown."""
+        selected_show = self.show_dropdown.currentText()
+        self.update_table(selected_show)  # Update table with shots from selected show
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
