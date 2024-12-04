@@ -24,9 +24,10 @@ Project launcher is to use the data we added in show manager. we can launch soft
 3. Copy comfiui code to .nuke:
    download and paste 'comfy_nuke_prompt_main.py' to your .nuke folder.
 
-3. Copy menu.py code from this repo to your menu.py in .nuke:
-     
-5. Launch the manager:
+4. Copy menu.py code from this repo to your menu.py in .nuke folder.
+5. download and paste custom_tools folder in .nuke folder.
+ 
+6. Launch the manager:
     ```bash
     python ./show_manager.py
     ```
