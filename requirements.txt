@@ -1,3 +1,8 @@
 pandas
 PySide6
 openpyxl
+PySide2
+websocket
+requests
+subprocess
+PIL
