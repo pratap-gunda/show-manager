@@ -1,3 +1,5 @@
+# Video-Link
+https://www.linkedin.com/posts/gunda-pratap_nuke-vfx-generativeai-activity-7282138363669725184-3VUL?utm_source=share&utm_medium=member_desktop&rcm=ACoAABOSQCsBCEJyn-YU9zw7k26TQIRfPhs248A
 # show-manager
 Creates shot list and folder structure. launches nuke houdini etc applications.
 
